@@ -1,0 +1,143 @@
+{% extends 'portal/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<style>
+body {
+  background-image: url("{% static 'images/background1.jpg' %}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h2, h4 {
+  color: #ece8e8; /* Change color to your desired color */
+}
+
+
+</style>
+
+<section class="container text-center">
+  <h2> <strong>Welcome Future Star!</strong></h2>
+  <h4> <strong>
+    "Empowering Minds, Enriching Futures: Your Gateway to Academic Success"</strong></h4>
+
+  <hr> <br>
+  <div class="row">
+    <div class="col-md-3">
+      <a href="notes">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/notes1.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              <strong>Notes </strong>
+            </h5>
+            Generate notes for future reference. They remain stored indefinitely until manually removed
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="homework">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/homework1.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              <strong>Homework </strong>
+            </h5>
+            Include homework assignments and set their due dates for organized prioritization based on deadlines.
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="youtube">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/youtube1.jpg' %}" alt="Youtube image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              <strong>YouTube </strong>
+            </h5>
+            Browse YouTube, search for your preferred video, and play it directly from the platform.
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="todo">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/todo1.jpg' %}" alt="Todo image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              <strong>To Do </strong>
+            </h5>
+            Enter your daily to-do lists and mark them as completed once finished.
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-3 ">
+      <a href="books">
+        <div class="card mt-20">
+          <img class="card-img-top" src="{% static 'images/books1.jpg' %}" alt="Book image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              <strong>Books </strong>
+            </h5>
+            Explore a variety of neatly organized books through our curated menu.
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+
+    <div class="col-md-3">
+      <a href="dictionary">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/dictionary1.jpg' %}" alt="Dictionary image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              <strong>Dictionary </strong>
+            </h5>
+            Struggling with a word from a book? No problem! Just enter it, and get the meaning instantly.
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a href="wiki">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/wiki1.jpg' %}" alt="Wikipedia image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              <strong>WikiPedia </strong>
+            </h5>
+            Need information for homework or assignments? Quickly search Wikipedia for fast results.
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <div class="col-md-3">
+      <a href="conversion">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/conversion1.jpg' %}" alt="Conversion Scale image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              <strong>Conversion </strong>
+            </h5>
+            Explore our conversion table to easily convert measurements into familiar units of your choice.
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+</section>
+{% endblock content %}

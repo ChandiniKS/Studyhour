@@ -1,0 +1,48 @@
+{% extends 'portal/base.html' %} 
+{% load static %} 
+{% load crispy_forms_tags %} 
+{% block content %}
+
+<section class='text-center container'>
+    <h2>Search articles in Wikipedia</h2>
+    <p>Just enter the search query to obtain the results</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input class="btn btn-danger" type="submit" value="Submit">
+    </form><br>
+
+    <div class="container">
+        <div class="content-section p-0 mt-5">
+            {% if error_message %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error_message }}
+                </div>
+            {% else %}
+                <a href="{{ link }}" class="p-0 m-0" target="_blank">
+                    <div class="custom-header">
+                        <h2>{{ title }}</h2>
+                        <h6>{{ link }}</h6>
+                    </div>
+                </a>
+
+                <hr class="p-0 m-0">
+                <p class="description m-5 p-5">
+                    {{ details }}
+                </p>
+                <hr>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if options %}
+        <div class="container">
+            <div class="content-section p-0 mt-5">
+                <h3>Multiple Result Found. Choose one of the following options and paste it in search..</h3>
+            </div>
+        </div>
+    {% endif %} 
+
+</section>
+
+{% endblock content %}
